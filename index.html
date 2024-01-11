@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veekshitha Naragani - Interactive Resume</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #544957;
+            transition: background-color 0.5s;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: rgb(132, 51, 173);
+            color: white;
+            transition: background-color 0.5s;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Main Content Styles */
+        .container {
+            padding: 30px;
+            background-color: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgb(132, 51, 173);
+            transition: box-shadow 0.5s;
+        }
+
+        /* Section Heading Styles */
+        h2 {
+            color: #343a40;
+            font-size: 30px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        /* Project Styles */
+        .project {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 30px;
+            position: relative;
+        }
+
+        .project h3 {
+            color: #343a40;
+            font-size: 24px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .project h3:hover {
+            color: #007bff;
+        }
+
+        .project p {
+            font-size: 18px;
+            color: #6c757d;
+            transition: color 0.3s;
+        }
+
+        .project a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Skills Styles */
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills li {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 16px;
+        }
+
+        .skills li:hover {
+            background-color: #007bff;
+        }
+
+        /* Certifications Styles */
+        .certifications {
+            margin-top: 30px;
+        }
+
+        .certifications ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .certifications li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            margin-top: 20px;
+            font-size: 18px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .timeline li span {
+            flex-basis: 30%;
+            color: rgb(132, 51, 173);
+            text-align: right;
+        }
+
+        .timeline li .content {
+            flex-basis: 65%;
+            background-color: #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline li h3 {
+            color: #343a40;
+            font-size: 24px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .timeline li p {
+            color: #6c757d;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .timeline li a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .timeline li a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgb(132, 51, 173);
+            color: white;
+            transition: background-color 0.5s;
+        }
+
+        footer .contact-info {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        footer .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer .contact-info a:hover {
+            color: rgb(132, 51, 173);
+        }
+
+        /* Add your animations here */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Veekshitha Naragani</h1>
+        <p>Undergraduate Student | VIT-AP University</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Summary Section -->
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>
+                Dedicated and dependable undergraduate in Computer Science Engineering, passionate about
+                leveraging technology to innovate and solve complex challenges. Proficient in software
+                development, cloud computing, cybersecurity, and committed to driving technological advancements
+                and delivering impactful solutions.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="timeline">
+            <h2>Education</h2>
+            <li>
+                <div class="content" onclick="toggleVisibility('education1')">
+                    <h3>B.Tech Computer Science Engineering</h3>
+                    <p>Vellore Institute of Technology, Andhra Pradesh<br>GPA: 8.4/10</p>
+                </div>
+            </li>
+            <li>
+                <div class="content" onclick="toggleVisibility('education2')">
+                    <h2>12th grade</h2>
+                    <h3>Narayana Institute</h3>
+                    <p>Percentage: 88%</p>
+                </div>
+            </li>
+            <li>
+                <div class="content" onclick="toggleVisibility('education3')">
+                    <h2>10th Grade</h2>
+                    <h3>Fiitjee International School</h3>
+                    <p>GPA: 9.7/10</p>
+                </div>
+            </li>
+        </section>
+        </br>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Android</li>
+                <li>Cloud Computing</li>
+                <li>CSS</li>
+                <li>Cybersecurity</li>
+                <li>Data Structures</li>
+                <li>Software Engineering</li>
+                <li>Google Cloud</li>
+                <li>HTML</li>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>Kali Linux</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Design Thinking</li>
+                <li>UML Diagrams</li>
+            </ul>
+        </section>
+        </br>
+        <!-- Projects Section -->
+        <section id="projects" class="project">
+            <h2>Projects</h2>
+            </br>
+            <div class="project" onclick="toggleVisibility('project1')">
+                <h3>Exam and Result Management Software</h3>
+                <div id="project1" style="display: none;">
+                    <p>
+                        Spearheaded the software engineering project and crafted detailed software requirements.
+                        Developed UML diagrams and collaborated with the team for seamless integration of features.
+                    </p>
+                </div>
+            </div>
+            <div class="project" onclick="toggleVisibility('project2')">
+                <h3>Website Deployment</h3>
+                <div id="project2" style="display: none;">
+                    <p>
+                        Created and deployed the Skillsguru website, a cloud-based E-learning platform.
+                        Utilized cloud computing technologies for scalability and accessibility.
+                        Developed dynamic web pages and integrated multimedia content.
+                        <a href="https://bald-headed-blindfo.000webhostapp.com/elearning.html" target="_blank">View
+                            Website</a>
+                    </p>
+                </div>
+            </div>
+            <div class="project" onclick="toggleVisibility('project3')">
+                <h3>Contacts App (Mobile Application)</h3>
+                <div id="project3" style="display: none;">
+                    <p>
+                        Developed a user-friendly Contacts app for Android using Android Studio.
+                        Utilized Java and XML to create a seamless user experience.
+                        Designed and implemented core functionalities of the Contacts app.
+                    </p>
+                </div>
+            </div>
+            <div class="project" onclick="toggleVisibility('project4')">
+                <h3>Hand Mouse (Human Interface device)</h3>
+                <div id="project4" style="display: none;">
+                    <p>
+                        Innovatively designed a Hand Mouse using Arduino and Python.
+                        Engineered the hardware components of the Hand Mouse using Arduino microcontrollers.
+                        Developed custom Arduino circuits and Python code to interpret hand gestures.
+                        Enhanced user accessibility and gaming experience through this unique HID device.
+                    </p>
+                </div>
+            </div>
+            <div class="project" onclick="toggleVisibility('project5')">
+                <h3>Malware Detection and Classification</h3>
+                <div id="project5" style="display: none;">
+                    <p>
+                        Developed Python-based malware detection and classification system using diverse datasets.
+                        Implemented machine learning models (e.g., Random Forest, SVM) for accurate identification of
+                        malware types.
+                        Contributed to cybersecurity efforts by enhancing malware detection capabilities.
+                    </p>
+                </div>
+            </div>
+            <div class="project" onclick="toggleVisibility('project6')">
+                <h3>Expense tracker application</h3>
+                <div id="project5" style="display: none;">
+                    <p>
+                        The Expense Tracker application is developed to offer users a convenient platform for recording expenses, categorizing transactions, and managing monthly bills. It provides insights into users' financial activities through categorized expense analysis and bill management capabilities.
+                    </p>
+                </div>
+            </div>
+        </section>        
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AI with Cybersecurity - IBM Qrader | SmartInternz</li>
+                <li>Google Cloud Digital Leader | Google</li>
+                <li>Advanced Data Structures Virtual Job Simulation | Walmart USA, Forage</li>
+            </ul>
+        </section>
+        <section id="certifications" class="certifications">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+                <li>Tamil</li>
+            </ul>
+        </section>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="contact-info">
+            <h1>Contact</h1>
+            <p>Email: veekshitha.21bce8943@vitapstudent.ac.in</p>
+            <p>Location: Hyderabad, Telangana, India</p>
+        </div>
+        
+    </footer>
+    
+
+    <script>
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+                element.style.animation = "fadeIn 0.5s";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
